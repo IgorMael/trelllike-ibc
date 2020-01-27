@@ -1,0 +1,33 @@
+// Place all the styles related to the Board controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$background: rgb(176, 70, 50);
+
+body {
+    background: orange !important;
+}
+.title {
+    margin: 12px
+}
+
+.board-item {
+    height: 96px;
+    width: 187px;
+    margin: 0 16px 8px 0;
+    background: $background;
+    border-radius: 3px;
+    padding: 16px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+
+
+    &:hover {
+        background: darken($background, $amount: 10%);
+    }
+}
+
+#steps-container {
+    display: flex;
+}

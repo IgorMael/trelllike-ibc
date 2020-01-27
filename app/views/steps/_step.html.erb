@@ -1,0 +1,13 @@
+<% if step.id %>
+  <div class="step-item" id="<%= dom_id(step) %>">
+    <div class="d-flex justify-content-between ">
+      <span class="step-item--title"><%= step.title %></span>
+      <%= link_to step, method: :delete, data: { confirm: 'Você tem certeza?' }, class: 'btn btn-light' do %>
+        <%= fa_icon "trash" %>
+      <% end %>
+    </div>
+    
+    <div class="tasks-container">
+    </div>
+</div>
+<% end %>

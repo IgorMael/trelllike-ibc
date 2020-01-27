@@ -10,6 +10,11 @@
   </head>
 
   <body>
+    <nav style="background-color: rgba(0,0,0,0.3) !important" class="navbar shadow-sm navbar-light bg-light fixed-top">
+      <%= link_to 'Trellike', home_path, class: "navbar-brand" %>
+    </nav>
+    <section class="content main">
     <%= yield %>
+    </section>
   </body>
 </html>

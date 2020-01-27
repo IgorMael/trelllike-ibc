@@ -1,0 +1,36 @@
+// Place all the styles related to the Steps controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.step-item {
+    padding: 4px;
+    width: 272px;
+    margin: 0 4px;
+    border-radius: 3px;
+    background-color: #ebecf0;
+    
+    &--title {
+        margin: 4px 8px;
+        color: #172b4d;
+    }
+
+    &.create-step {
+        background-color: rgba(0,0,0,.24);
+        cursor: pointer;
+
+        .btn {
+            color: rgba(255,255,255,0.6);
+
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        &:hover {
+            background-color: lighten($color: rgba(0,0,0,.24), $amount: 20%);
+        }
+    }
+
+    
+}
+

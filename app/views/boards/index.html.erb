@@ -1,0 +1,17 @@
+<div class="container">
+    <h1 class="title">Quadros</h1>
+    <div id="boards-container" class="row">
+        <%= render @boards %>
+        <%= link_to new_board_path, remote: true, data: { target: '#uploadboard', toggle: 'modal' } do %>
+            <div id="create-board-btn" class="board-item shadow-sm">
+                Criar quadro
+            </div>
+        <% end %>
+    </div>
+</div>
+
+<div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content"></div>
+    </div>
+</div>

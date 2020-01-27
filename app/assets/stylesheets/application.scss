@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+ 
+ @import "bootstrap";
+ @import "font-awesome";
+
+
+ .content {
+     &.main {
+         position: absolute;
+     }
+     margin-top: 55.6px;
+ }
+
+ .navbar-fixed {
+     width: 100%;
+     position: fixed;
+ }

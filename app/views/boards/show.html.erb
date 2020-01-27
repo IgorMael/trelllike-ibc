@@ -1,0 +1,22 @@
+<style>
+  body {
+    background-color: <%= @board.color %> !important;
+  }
+</style>
+<nav class="navbar navbar-light navbar-fixed">
+  <%= link_to @board.title, home_path, class: "navbar-brand" %>
+  <%= link_to @board, method: :delete, data: { confirm: 'Você tem certeza?' }, class: 'btn btn-light' do %>
+    <%= fa_icon "trash" %>
+  <% end %>
+</nav>
+<section class="content"> 
+  <div style="display: flex">
+    <div id="steps-container" data-url="<%= sort_steps_path %>" >
+      <%= render @board.steps %>
+    </div>
+    <div class="step-item">
+    <span class="step-item--title">Adicionar lista</span>
+      <%= render "steps/form", step: @board.steps.build %>
+    </div>
+  </div>
+</section>
