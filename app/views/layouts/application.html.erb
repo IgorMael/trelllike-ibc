@@ -9,11 +9,11 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <nav style="background-color: rgba(0,0,0,0.3) !important" class="navbar shadow-sm navbar-light bg-light fixed-top">
+  <body class="main-area">
+    <nav class="navbar bg shadow-sm navbar-light navbar-fixed">
       <%= link_to 'Trellike', home_path, class: "navbar-brand" %>
     </nav>
-    <section class="content main">
+    <section class="content main co ntainer-fluid">
     <%= yield %>
     </section>
   </body>

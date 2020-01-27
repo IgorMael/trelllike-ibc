@@ -15,7 +15,7 @@ class BoardsController < ApplicationController
   # GET /boards/new
   def new
     @board = Board.new
-    @board.color =  "#b04632"
+    @board.color =  "blue-theme"
     respond_to do |format|
         format.js
     end

@@ -2,13 +2,31 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$background: rgb(176, 70, 50);
+$background: #f4f5f7;
 
-body {
-    background: orange !important;
+body.main-area {
+    background-color: $background;
 }
+
+.theme-picker {
+    label {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+}
+
+#create-board-btn {
+    background: rgba(9,30,66,.04);
+    color: black;
+    font-weight: 400;
+    margin: 0 auto;
+    text-align: center;
+}
+
 .title {
-    margin: 12px
+    color: #172b4d;
+    margin: 40px 0 30px 0;
 }
 
 .board-item {
@@ -21,10 +39,30 @@ body {
     font-weight: 500;
     color: #fff;
     cursor: pointer;
+}
 
 
-    &:hover {
-        background: darken($background, $amount: 10%);
+.modal-dialog {
+    .main-area & {
+        width:300px;
+    }
+    
+}
+.modal-content.create-board {
+    width: 300px;
+    padding: 8px;
+    input[type=text] {
+        width: 100%;
+        border-radius: 3px;
+        border: none;
+        background: rgba(#e3e3e3, 0.3);
+    }
+}
+
+.actions {
+    margin-top: 8px;
+    input {
+        background-color: #0079bf;
     }
 }
 

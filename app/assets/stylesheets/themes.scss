@@ -1,0 +1,107 @@
+body.main-area {
+    .navbar.bg {
+        background-color: rgba(0,0,0,0.3)
+    }
+    
+    &.blue-theme {
+        $bg: #0079bf;
+        background-color: $bg !important;
+        &--hover:hover{
+            background-color: darken($bg, $amount: 10%) !important;
+        }
+    }
+    
+    &.red-theme {
+        $bg: #B04632;
+        background-color: $bg !important;
+        &--hover:hover{
+            background-color: darken($bg, $amount: 10%) !important;
+        }
+    }
+    
+    &.green-theme {
+        $bg: #519839;
+        &--hover:hover{
+            background-color: darken($bg, $amount: 10%) !important;
+        }
+    }
+    
+    &.purple-theme {
+        $bg: rgb(137, 96, 158);
+        background-color: $bg !important;
+        &--hover:hover{
+            background-color: darken($bg, $amount: 10%) !important;
+        }
+    
+    }
+    
+    &.pink-theme {
+        $bg: rgb(205, 90, 145);
+        background-color: $bg !important;
+        &--hover:hover{
+            background-color: darken($bg, $amount: 10%) !important;
+        }
+    }
+    
+    &.orange-theme {
+        $bg: #d29034;
+        background-color: $bg !important;
+        &--hover:hover{
+            background-color: darken($bg, $amount: 10%) !important;
+        }
+    }
+}
+
+
+    .navbar.bg {
+        background-color: rgba(0,0,0,0.3)
+    }
+    
+    .blue-theme {
+        $bg: #0079bf;
+        background-color: $bg !important;
+        &--hover:hover{
+            background-color: darken($bg, $amount: 10%) !important;
+        }
+    }
+    
+    .red-theme {
+        $bg: #B04632;
+        background-color: $bg !important;
+        &--hover:hover{
+            background-color: darken($bg, $amount: 10%) !important;
+        }
+    }
+    
+    .green-theme {
+        $bg: #519839;
+        background-color: $bg !important;
+        &--hover:hover{
+            background-color: darken($bg, $amount: 10%) !important;
+        }
+    }
+    
+    .purple-theme {
+        $bg: rgb(137, 96, 158);
+        background-color: $bg !important;
+        &--hover:hover{
+            background-color: darken($bg, $amount: 10%) !important;
+        }
+    
+    }
+    
+    .pink-theme {
+        $bg: rgb(205, 90, 145);
+        background-color: $bg !important;
+        &--hover:hover{
+            background-color: darken($bg, $amount: 10%) !important;
+        }
+    }
+    
+    .orange-theme {
+        $bg: #d29034;
+        background-color: $bg !important;
+        &--hover:hover{
+            background-color: darken($bg, $amount: 10%) !important;
+        }
+    }

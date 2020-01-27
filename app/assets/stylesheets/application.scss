@@ -16,6 +16,15 @@
  
  @import "bootstrap";
  @import "font-awesome";
+ @import "themes.scss";
+
+ 
+.sortable-placeholder {
+    background-color: #e3e3e3; 
+    opacity: 0.6;
+    margin-bottom: 5px;
+    border-radius: 3px;
+}
 
 
  .content {
@@ -26,6 +35,10 @@
  }
 
  .navbar-fixed {
-     width: 100%;
-     position: fixed;
+     width: 100vw;
+     position: absolute;
+ }
+
+ .dragged{
+     transform: rotate(10deg);
  }

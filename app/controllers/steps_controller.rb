@@ -57,6 +57,7 @@ class StepsController < ApplicationController
   # DELETE /steps/1.json
   def destroy
     @id = @step.board_id
+    @step.destroy
     respond_to do |format|
       format.html { redirect_to board_url(@id), notice: 'Step was successfully destroyed.' }
       format.json { head :no_content }
@@ -67,7 +68,6 @@ class StepsController < ApplicationController
     params[:step].each_with_index do |id, index|
        Step.where(id: id).update_all(position: index + 1)
     end
-
     head :ok
   end
 

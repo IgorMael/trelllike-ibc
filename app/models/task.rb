@@ -1,6 +1,6 @@
 class Task < ApplicationRecord
   belongs_to :step
-  act_as_list scope: :task
+  acts_as_list scope: :step
 
   validates :title, presence: true
 end

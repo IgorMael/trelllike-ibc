@@ -10,21 +10,34 @@
       </ul>
     </div>
   <% end %>
-
+  
+  <div class="field theme-picker">
+    <label class="blue-theme blue-theme--hover" for="board_color_blue-theme"></label>
+    <label class="orange-theme orange-theme--hover" for="board_color_orange-theme" for="board_color_orange-theme--hover"></label>
+    <label class="green-theme green-theme--hover" for="board_color_green-theme"></label>
+    <label class="red-theme red-theme--hover" for="board_color_red-theme"></label>
+    <label class="purple-theme purple-theme--hover" for="board_color_purple-theme"></label>
+    <label class="pink-theme pink-theme--hover" for="board_color_pink-theme"></label>
+  </div>  
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, required: true, placeholder: "Adicionar título do quadro" %>
   </div>
 
   <div class="field">
-      <%= form.label :color %><br />
-      <%= form.label :color, "Laranja", :class => class_string("clickable", selected: board["color"] == "#b04632"), :style => "background: #b04632", :value => "#b04632"  %>
-      <%= form.radio_button :color, "#b04632", :class => "d-none" %>
-      <%= form.label :color, "Cinza", :style => "background: gray", :value => "Gray" %>
-      <%= form.radio_button :color, "gray", :class => "d-none" %>
+      <%= form.radio_button :color, "blue-theme", :class => "d-none" %>
+      <%= form.radio_button :color, "orange-theme", :class => "d-none" %>
+      <%= form.radio_button :color, "green-theme", :class => "d-none" %>
+      <%= form.radio_button :color, "red-theme", :class => "d-none" %>
+      <%= form.radio_button :color, "purple-theme", :class => "d-none" %>
+      <%= form.radio_button :color, "pink-theme", :class => "d-none" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Criar quadro", :class => "btn" %>
   </div>
 <% end %>
+  <script>
+    $("input[name='board[color]']").change(ev => {
+      $(".actions input").removeClass().addClass(`btn ${ev.target.value} ${ev.target.value}--hover`);
+    });
+  </script>

@@ -1,4 +1,4 @@
-<%= form_with(model: task, local: true) do |form| %>
+<%= form_with(model: task) do |form| %>
   <% if task.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(task.errors.count, "error") %> prohibited this task from being saved:</h2>
@@ -12,21 +12,20 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.text_area(:title, placeholder: "Insiria um título para um novo cartão", required: true) %>
   </div>
-
-  <div class="field">
+  
+  <div class="field d-none">
     <%= form.label :position %>
     <%= form.number_field :position %>
   </div>
 
-  <div class="field">
+  <div class="field d-none">
     <%= form.label :step_id %>
     <%= form.text_field :step_id %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Adicionar cartão", :class => class_string("btn", "green-theme", "green-theme--hover") %>
   </div>
 <% end %>

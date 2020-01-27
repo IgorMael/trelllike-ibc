@@ -1,13 +1,21 @@
 <% if step.id %>
-  <div class="step-item" id="<%= dom_id(step) %>">
+<div  id="<%= dom_id(step) %>">
+  <div class="step-item">
     <div class="d-flex justify-content-between ">
       <span class="step-item--title"><%= step.title %></span>
       <%= link_to step, method: :delete, data: { confirm: 'Você tem certeza?' }, class: 'btn btn-light' do %>
         <%= fa_icon "trash" %>
       <% end %>
     </div>
-    
-    <div class="tasks-container">
+
+    <div class="d-flex flex-column">
+      <div class="tasks-container" id="<%= "t_#{dom_id(step)}" %>" data-url="<%= sort_tasks_path(step) %>" >
+        <%= render step.tasks %>
+      </div>
+      <div class="task-item">
+        <%= render "tasks/form", task: step.tasks.build %>
+      </div>
     </div>
+  </div>
 </div>
 <% end %>

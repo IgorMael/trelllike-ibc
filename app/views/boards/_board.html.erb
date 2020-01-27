@@ -1,6 +1,5 @@
-
 <%= link_to board_path(board) do %>
-    <div class="board-item", style="background: <%= board.color %>">
+    <div class="<%= class_string("board-item", board.color, "#{board.color}--hover") %>" >
         <%= board.title %>
     </div>
 <% end %>

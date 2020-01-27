@@ -15,6 +15,9 @@ class TasksController < ApplicationController
   # GET /tasks/new
   def new
     @task = Task.new
+    respond_to do |format|
+      format.js
+    end
   end
 
   # GET /tasks/1/edit
@@ -28,8 +31,7 @@ class TasksController < ApplicationController
 
     respond_to do |format|
       if @task.save
-        format.html { redirect_to @task, notice: 'Task was successfully created.' }
-        format.json { render :show, status: :created, location: @task }
+        format.js
       else
         format.html { render :new }
         format.json { render json: @task.errors, status: :unprocessable_entity }
@@ -59,6 +61,13 @@ class TasksController < ApplicationController
       format.html { redirect_to tasks_url, notice: 'Task was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def sort
+    params[:task].each_with_index do |id, index|
+       Task.where(id: id).update_all(position: index + 1, step_id: params[:step_id])
+    end
+    head :ok
   end
 
   private
