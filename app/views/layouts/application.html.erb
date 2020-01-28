@@ -12,7 +12,9 @@
 
   <body class="main-area">
     <nav class="navbar bg shadow-sm navbar-light fixed-x position-relative">
-      <img src="<%= image_url("logo.png") %>" class="mx-auto">
+      <%= link_to home_path, class: "mx-auto" do %>
+       <img src="<%= image_url("logo.png") %>">
+      <% end %>
     </nav>
     <section class="content main co ntainer-fluid">
     <%= yield %>

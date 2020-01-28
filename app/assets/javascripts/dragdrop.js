@@ -1,7 +1,8 @@
 
 $(document).on('turbolinks:load', function() {
     $("#steps-container").sortable({
-      placeholder: "dragged",
+      placeholder: "sortable-placeholder",
+      forcePlaceholderSize: true,
       sort: function(event, ui){
           $(".dragged").height(ui.item.outerHeight());
      },
@@ -23,6 +24,7 @@ $(document).on('turbolinks:load', function() {
   
     $(".tasks-container").sortable({
       placeholder: "sortable-placeholder",
+      forcePlaceholderSize: true,
       sort: function(event, ui){
           $(".sortable-placeholder").height(ui.item.outerHeight());
      },
