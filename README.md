@@ -1,6 +1,6 @@
 # Trellike 
-    Uma aplicação para para gerenciar tarefas estilo Trello.
-
+Uma aplicação para para gerenciar tarefas estilo Trello.
+Pode ser acessado pela página https://trellike-ibc.herokuapp.com/.
 #### O teste:
 Criar uma app de TODO LIST simples (trello).
 Deverá ser entregue rodando em algum servidor web juntamente com todo o código no Github.
