@@ -1,3 +1,3 @@
-$("#create-board-btn").parent().before("<%= j render @board %>");
+$("#steps-container").append("<%= j render @board %>");
 $("#modal-window").find(".modal-content").html("");
 $("#modal-window").modal('hide');

@@ -1,4 +1,4 @@
-<%= form_with(model: step) do |form| %>
+<%= form_with(model: step, id: "create-step") do |form| %>
   <% if step.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(step.errors.count, "error") %> prohibited this step from being saved:</h2>
@@ -11,12 +11,12 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.text_field :title, required: true %>
+  <div class="field w-100">
+    <%= form.text_field :title, required: true, class: "w-100" %>
   </div>
 
   <div class="field d-none">
-    <%= form.label :position %>
+    <%= form.label :pos12ition %>
     <%= form.number_field :position %>
   </div>
 
@@ -26,6 +26,7 @@
   </div>
 
   <div class="actions">
-    <%= form.submit "Adicionar lista", :class => "btn btn-primary" %>
+    <%= form.submit "Adicionar lista", :class => class_string("btn", "green-theme", "green-theme--hover text-white") %>
+    
   </div>
 <% end %>

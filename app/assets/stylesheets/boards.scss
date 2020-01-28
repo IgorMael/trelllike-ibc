@@ -69,3 +69,9 @@ body.main-area {
 #steps-container {
     display: flex;
 }
+
+#boards-container {
+    a:hover {
+        text-decoration: none;
+    }
+}
