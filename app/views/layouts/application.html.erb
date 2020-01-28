@@ -4,14 +4,15 @@
     <title>Trellike</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= favicon_link_tag image_url('fav.png') %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body class="main-area">
-    <nav class="navbar bg shadow-sm navbar-light navbar-fixed">
-      <%= link_to 'Trellike', home_path, class: "navbar-brand" %>
+    <nav class="navbar bg shadow-sm navbar-light fixed-x position-relative">
+      <img src="<%= image_url("logo.png") %>" class="mx-auto">
     </nav>
     <section class="content main co ntainer-fluid">
     <%= yield %>
