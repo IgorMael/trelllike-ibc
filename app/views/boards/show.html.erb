@@ -1,13 +1,13 @@
 <script>
   $("body.main-area").addClass("<%= @board.color %>")
 </script>
-<nav  class="<%= class_string("navbar", "navbar-light", "fixed-x", "position-relative", @board.color) %>" >
-  <%= link_to @board.title, home_path, class: "navbar-brand" %>
+<nav  class="<%= class_string("navbar", "navbar-light", "fixed-x", "justify-content-start" ,"position-relative", @board.color) %>" >
+  <%= link_to @board.title, home_path, class: "navbar-brand mr-0" %>
   <div class="pr-2">
-    <%= link_to edit_board_path, remote: true, method: :get, class: 'btn btn-light' do %>
+    <%= link_to edit_board_path, remote: true, method: :get, class: 'btn pr-0 ' do %>
       <%= fa_icon "edit" %>
     <% end %>
-    <%= link_to @board, method: :delete, data: { confirm: 'A exclusão é definitiva,  deseja prosseguir?' }, class: 'btn btn-light' do %>
+    <%= link_to @board, method: :delete, data: { confirm: 'A exclusão é definitiva,  deseja prosseguir?' }, class: 'btn pl-0' do %>
       <%= fa_icon "trash" %>
     <% end %>
   </div>

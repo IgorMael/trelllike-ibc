@@ -1,24 +1,20 @@
-# README
+# Trellike 
+    Uma aplicação para para gerenciar tarefas estilo Trello.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### O teste:
+Criar uma app de TODO LIST simples (trello).
+Deverá ser entregue rodando em algum servidor web juntamente com todo o código no Github.
+#### Características :
+  - Boards ilimitados
+  - Tasks ilimitadas
+  - Etapas ilimitadas
+ 
+#### Tecnologias Obrigatórias:
+  - Ruby On Rails
+  - Bootstrap
+  - RSpec
+  - Deploy em algum servidor de sua preferência
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Considerações
+A ideia desse projeto é testar suas habilidades mais proximo o possível e nossa realidade.
+Esse teste deverá ser executado com no maximo uma semana (7 dias) a partir de hoje.
