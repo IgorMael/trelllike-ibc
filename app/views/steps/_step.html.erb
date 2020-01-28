@@ -3,7 +3,7 @@
   <div class="step-item">
     <div class="d-flex justify-content-between ">
       <span class="step-item--title"><%= step.title %></span>
-      <%= link_to step, method: :delete, data: { confirm: 'Você tem certeza?' }, class: 'btn btn-light' do %>
+      <%= link_to step, method: :delete, data: { confirm: 'A exclusão é definitiva,  deseja prosseguir?' }, class: 'btn' do %>
         <%= fa_icon "trash" %>
       <% end %>
     </div>

@@ -57,8 +57,9 @@ class TasksController < ApplicationController
   # DELETE /tasks/1.json
   def destroy
     @task.destroy
+    @step = Step.find(@task.step_id)
     respond_to do |format|
-      format.html { redirect_to tasks_url, notice: 'Task was successfully destroyed.' }
+      format.html { redirect_to board_url(@step.board_id), notice: 'Task was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -75,7 +76,6 @@ class TasksController < ApplicationController
     def set_task
       @task = Task.find(params[:id])
     end
-
     # Never trust parameters from the scary internet, only allow the white list through.
     def task_params
       params.require(:task).permit(:title, :position, :step_id)

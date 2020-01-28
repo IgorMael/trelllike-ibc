@@ -1,3 +1,7 @@
-<div class="task-item" id="<%= dom_id(task) %>">
+<div class="task-item position-relative" id="<%= dom_id(task) %>">
     <span class="task-item--title"><%= task.title %></span>
+    <%= link_to task, method: :delete, 
+    data: { confirm: 'A exclusão é definitiva,  deseja prosseguir?' }, class: 'btn float-right' do %>
+        <%= fa_icon "minus-circle", class: "position-absolute", style: "top: 8px" %>
+    <% end %>
 </div>
