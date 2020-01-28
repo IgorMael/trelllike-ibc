@@ -1,7 +1,9 @@
-<div class="container">
+<div class="container-fluid">
     <h1 class="title">Quadros</h1>
-    <div id="boards-container" class="d-flex flex-wrap">
-        <%= render @boards %>
+    <div  class="d-flex flex-wrap">
+        <div id="boards-container" class="d-flex flex-wrap">
+            <%= render @boards %>
+        </div>
         <%= link_to new_board_path, remote: true, data: { target: '#uploadboard', toggle: 'modal' } do %>
             <div id="create-board-btn" class="board-item shadow-sm">
                 Criar quadro
