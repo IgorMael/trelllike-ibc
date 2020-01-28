@@ -3,9 +3,14 @@
   <div class="step-item">
     <div class="d-flex justify-content-between ">
       <span class="step-item--title"><%= step.title %></span>
-      <%= link_to step, method: :delete, data: { confirm: 'A exclusão é definitiva,  deseja prosseguir?' }, class: 'btn' do %>
-        <%= fa_icon "trash" %>
-      <% end %>
+      <div>
+        <%= link_to edit_step_path(step.id), remote: true, method: :get, class: 'btn pr-1' do %>
+          <%= fa_icon "edit" %>
+        <% end %>
+        <%= link_to step, method: :delete, data: { confirm: 'A exclusão é definitiva,  deseja prosseguir?' }, class: 'btn pl-0' do %>
+          <%= fa_icon "trash" %>
+        <% end %>
+      </div>
     </div>
 
     <div class="d-flex flex-column">

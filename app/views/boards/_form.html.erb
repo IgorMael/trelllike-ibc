@@ -33,11 +33,12 @@
   </div>
 
   <div class="actions">
-    <%= form.submit "Criar quadro", :class => "btn" %>
+
+    <%= form.submit (@isEdition ? "Editar quadro" : "Criar quadro"), :class => "btn" %>
   </div>
 <% end %>
   <script>
     $("input[name='board[color]']").change(ev => {
-      $(".actions input").removeClass().addClass(`btn ${ev.target.value} ${ev.target.value}--hover`);
+      $("#modal-window .actions input").removeClass().addClass(`btn ${ev.target.value} ${ev.target.value}--hover`);
     });
   </script>

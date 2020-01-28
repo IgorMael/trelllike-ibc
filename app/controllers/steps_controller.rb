@@ -7,10 +7,6 @@ class StepsController < ApplicationController
     @steps = Step.all
   end
 
-  # GET /steps/1
-  # GET /steps/1.json
-  def show
-  end
 
   # GET /steps/new
   def new
@@ -22,6 +18,10 @@ class StepsController < ApplicationController
 
   # GET /steps/1/edit
   def edit
+    @isEdition = true
+    respond_to do |format|
+      format.js
+    end
   end
 
   # POST /steps
@@ -44,7 +44,8 @@ class StepsController < ApplicationController
   def update
     respond_to do |format|
       if @step.update(step_params)
-        format.html { redirect_to @step, notice: 'Step was successfully updated.' }
+        format.js
+        format.html { redirect_to home_path, notice: 'Step was successfully updated.' }
         format.json { render :show, status: :ok, location: @step }
       else
         format.html { render :edit }

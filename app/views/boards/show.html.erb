@@ -3,9 +3,15 @@
 </script>
 <nav  class="<%= class_string("navbar", "navbar-light", "navbar-fixed", @board.color) %>" >
   <%= link_to @board.title, home_path, class: "navbar-brand" %>
-  <%= link_to @board, method: :delete, data: { confirm: 'A exclusão é definitiva,  deseja prosseguir?' }, class: 'btn btn-light' do %>
-    <%= fa_icon "trash" %>
+  <div>
+  <%= link_to edit_board_path, remote: true, method: :get, class: 'btn btn-light' do %>
+    <%= fa_icon "edit" %>
   <% end %>
+    <%= link_to @board, method: :delete, data: { confirm: 'A exclusão é definitiva,  deseja prosseguir?' }, class: 'btn btn-light' do %>
+      <%= fa_icon "trash" %>
+    <% end %>
+
+  </div>
 </nav>
 <section class="content"> 
   <div class="d-flex">
@@ -20,3 +26,8 @@
     </div>
   </div>
 </section>
+<div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="Criar quadro" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content create-board"></div>
+    </div>
+</div>

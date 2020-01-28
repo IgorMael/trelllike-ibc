@@ -12,11 +12,14 @@
   <% end %>
 
   <div class="field w-100">
+    <% if @isEdition %>
+      <%= form.label :title, "Nome da lista" %>
+    <% end %>
     <%= form.text_field :title, required: true, class: "w-100" %>
   </div>
 
   <div class="field d-none">
-    <%= form.label :pos12ition %>
+    <%= form.label :position %>
     <%= form.number_field :position %>
   </div>
 
@@ -26,7 +29,7 @@
   </div>
 
   <div class="actions">
-    <%= form.submit "Adicionar lista", :class => class_string("btn", "green-theme", "green-theme--hover text-white") %>
+    <%= form.submit (step.id ? "Editar lista" : "Criar lista"), :class => class_string("btn", "green-theme", "green-theme--hover text-white") %>
     
   </div>
 <% end %>

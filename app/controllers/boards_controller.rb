@@ -23,6 +23,10 @@ class BoardsController < ApplicationController
 
   # GET /boards/1/edit
   def edit
+    @isEdition = true
+    respond_to do |format|
+      format.js
+    end
   end
 
   # POST /boards
